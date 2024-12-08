@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom fonts css  */
+
+@font-face {
+  font-family: "roboto-mono";
+  src: url("./assets/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "mouse-memoirs";
+  src: url("./assets/Mouse_Memoirs/MouseMemoirs-Regular.ttf");
+}
+
+.custom-font-mouse-memoirs {
+  font-family: "mouse-memoirs";
+}
+.custom-font-roboto-mono {
+  font-family: "roboto-mono";
+}
+/* ****************** */
+
+.cursor {
+  border: 1px solid transparent;
+  padding-inline: 2px;
+}
+
+.cursor-active {
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.keyboard-key-active {
+  background-color: white;
+}
+
+.keyboard-key-rigth {
+  background-color: #ef4444;
+}
+
+.keyboard-key-wrong {
+  background-color: #22c55e;
+}

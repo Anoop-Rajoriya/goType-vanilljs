@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goType</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="max-w-screen min-h-screen w-full bg-[url('./src/assets/background-mobile.svg')] sm:bg-[url('./src/assets/background-tablet.svg')] lg:bg-[url('./src/assets/background-desktop.svg')] bg-no-repeat bg-cover flex p-2 py-4"
+    >
+      <div id="wraper" class="flex-1 max-w-2xl w-full mx-auto flex flex-col">
+        <header
+          class="text-white text-3xl sm:text-4xl lg:text-5xl flex items-center justify-between pb-2 sm:pb-4 py-6 sm:py-4 lg:py-3"
+        >
+          <a href="#" class="custom-font-mouse-memoirs">goType</a>
+          <div
+            id="progressBar"
+            class="bg-white rounded-full w-24 h-3 sm:w-36 sm:h-4 lg:w-56 lg:h-5 overflow-hidden p-0.5"
+          >
+            <div
+              id="filler"
+              class="h-full bg-[#1b0644] rounded-full"
+            ></div>
+          </div>
+        </header>
+        <main class="flex-1 flex flex-col">
+          <div
+            id="input-area"
+            class="w-full max-w-screen-sm text-white text-2xl text-center p-2 py-10 sm;py-5 lg:py-4 mx-auto mt-8 sm:mt-9 lg:mt-10 rounded-lg border-white border-2 relative custom-font-roboto-mono font-bold"
+          >
+            <p
+              id="dashboard"
+              class="absolute inset-0 bg-white/50 backdrop-blur-sm text-[#1b0644] text-xl sm:text-3xl lg:text-5xl capitalize items-center justify-center cursor-pointer hidden"
+            >
+              restart
+            </p>
+          </div>
+          <div
+            id="keyboard"
+            class="border-white border-2 rounded-lg mt-8 sm:mt-9 lg:mt-10 max-w-lg w-full mx-auto py-1 overflow-hidden space-y-1"
+          ></div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
