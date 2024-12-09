@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "roboto-mono";
-  src: url("./assets/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+  src: url("./public/fonts/RobotoMono-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "mouse-memoirs";
-  src: url("./assets/Mouse_Memoirs/MouseMemoirs-Regular.ttf");
+  src: url("./public/fonts/MouseMemoirs-Regular.ttf");
 }
 
 .custom-font-mouse-memoirs {
