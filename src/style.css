@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "roboto-mono";
-  src: url("./public/fonts/RobotoMono-VariableFont_wght.ttf");
+  src: url("/fonts/RobotoMono-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "mouse-memoirs";
-  src: url("./public/fonts/MouseMemoirs-Regular.ttf");
+  src: url("/fonts/MouseMemoirs-Regular.ttf");
 }
 
 .custom-font-mouse-memoirs {
@@ -28,16 +28,4 @@
 
 .cursor-active {
   border-color: rgba(255, 255, 255, 0.65);
-}
-
-.keyboard-key-active {
-  background-color: white;
-}
-
-.keyboard-key-rigth {
-  background-color: #ef4444;
-}
-
-.keyboard-key-wrong {
-  background-color: #22c55e;
 }

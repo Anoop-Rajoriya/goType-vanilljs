@@ -1,3 +1,3 @@
 # goType web app usining Vanilla js with tailwindcss.
 
-> [live link]()
+> [live link](https://go-type.netlify.app/)

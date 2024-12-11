@@ -1,4 +1,4 @@
-export default function initKeyboard() {
+export function displayKeyboard() {
   const keyboardLayout = [
     ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "back"],
     ["tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
@@ -38,7 +38,7 @@ export default function initKeyboard() {
   });
 }
 
-export function updateKeyboard(next, current, keyStatus) {
+export default function updateKeyboard(next, current, keyStatus) {
   const keysList = document.querySelectorAll("#keyboard span");
 
   keysList.forEach((keyboardKey) => {
@@ -107,10 +107,10 @@ export function updateKeyboard(next, current, keyStatus) {
     ) {
       keyboardKey.classList.remove("bg-white/60");
       if (keyStatus) {
-        console.log(current, "right key");
+        // console.log(current, "right key");
         keyboardKey.classList.add("bg-green-500");
       } else {
-        console.log(current, "wrong key");
+        // console.log(current, "wrong key");
         keyboardKey.classList.add("bg-red-500");
       }
     }
@@ -118,10 +118,10 @@ export function updateKeyboard(next, current, keyStatus) {
     if (/[A-Z:]/.test(next) && keyboardKey.textContent == "shift") {
       keyboardKey.classList.remove("bg-white/60");
       if (keyStatus) {
-        console.log(current, "right key");
+        // console.log(current, "right key");
         keyboardKey.classList.add("bg-green-500");
       } else {
-        console.log(current, "wrong key");
+        // console.log(current, "wrong key");
         keyboardKey.classList.add("bg-red-500");
       }
     }
