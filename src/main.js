@@ -2,13 +2,20 @@ import { displayNewWords, updateInputAreaChar } from "./inputArea";
 import updateKeyboard, { displayKeyboard } from "./keyboard";
 import updateProgressBar from "./progressBar";
 import "./style.css";
+import { endTrackWpm, startTrackWpm } from "./utilities";
 
 function main({ key }) {
   const inputArea = document.querySelector("#input-area");
   const keyboardContainer = document.querySelector("#keyboard");
   const dashboard = document.querySelector("#dashboard");
   const restartButton = document.querySelector("#restart-button");
-  let data = { appState: false };
+  let data = {
+    appState: false,
+    startTime: null,
+    endTime: null,
+    incorractTypedCharacters: null,
+    totleTypedCharacters: null,
+  };
 
   // initial setup displaying words and keyboard ui
   displayKeyboard(keyboardContainer);
@@ -24,10 +31,13 @@ function main({ key }) {
       displayNewWords(inputArea);
       updateProgressBar();
       updateKeyboard(inputArea.querySelector("span").textContent);
+      startTrackWpm(data);
+      console.log(data);
     } else {
       data.appState = false;
       restartButton.textContent = "start";
       dashboard.classList.replace("hidden", "flex");
+      endTrackWpm(data);
     }
   }
 
@@ -63,13 +73,14 @@ function main({ key }) {
         expactedKey.textContent,
         false
       );
+      data.incorractTypedCharacters += 1;
     }
-
+    data.totleTypedCharacters += 1;
     // updating progressBar
     updateProgressBar();
 
     // restarting app
-    if (expactedKey.nextElementSibling.tagName == "P") {
+    if (expactedKey.nextElementSibling.tagName == "DIV") {
       restartButton.click();
     }
   }

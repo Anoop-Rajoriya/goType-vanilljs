@@ -27,3 +27,36 @@ export function getWords(len) {
   elms[0].classList.add("cursor-active");
   return elms;
 }
+
+export function startTrackWpm(data) {
+  data.startTime = new Date();
+  data.incorractTypedCharacters = 0;
+  data.totleTypedCharacters = 0;
+}
+export function endTrackWpm(data) {
+  data.endTime = new Date();
+  // elapsed time in seconds
+  const timeElapsed = (data.endTime - data.startTime) / 1000;
+
+  if (data.totleTypedCharacters > 0) {
+    const grossWPM = (data.totleTypedCharacters / 5) * (60 / timeElapsed);
+    const netWPM =
+      grossWPM - data.incorractTypedCharacters / (timeElapsed / 60);
+
+    const grossSpeed = document.querySelector("#gross-speed");
+    const netSpeed = document.querySelector("#net-speed");
+    const wrong = document.querySelector("#wrong-word");
+
+    grossSpeed.parentElement.classList.replace("hidden", "block");
+
+    grossSpeed.textContent = grossWPM.toFixed(2);
+    netSpeed.textContent = netWPM.toFixed(2);
+    wrong.textContent = data.incorractTypedCharacters;
+    console.log(`Gross WPM: ${grossWPM.toFixed(2)}`);
+    console.log(`Net WPM: ${netWPM.toFixed(2)}`);
+    console.log(`Errors: ${data.incorractTypedCharacters}`);
+  } else {
+    console.log("dont't make fun with me!");
+    alert("dont't make fun with me!");
+  }
+}

@@ -35,12 +35,18 @@
             id="input-area"
             class="w-full max-w-screen-sm text-white text-2xl text-center p-2 py-10 sm;py-5 lg:py-4 mx-auto mt-8 sm:mt-9 lg:mt-10 rounded-lg border-white border-2 relative custom-font-roboto-mono font-bold overflow-hidden"
           >
-            <p
+            <div
               id="dashboard"
-              class="absolute inset-0 bg-white/50 backdrop-blur-sm text-[#1b0644] text-xl sm:text-2xl lg:text-4xl capitalize items-center justify-center flex"
+              class="absolute inset-0 bg-white/50 backdrop-blur-sm text-[#1b0644] text-2xl sm:text-3xl lg:text-4xl font-bold capitalize items-center justify-center flex flex-col gap-4"
             >
               start typing
-            </p>
+              <p class="text-xl w-[70%] hidden">
+                your gross speed: <span id="gross-speed">#</span> , net speed:
+                <span id="net-speed">#</span>. and typed wrong characters
+                <span id="wrong-word">#</span>.
+                <span>keep practise to be a perfact</span>
+              </p>
+            </div>
           </div>
           <div
             id="keyboard"

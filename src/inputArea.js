@@ -1,7 +1,7 @@
 import { getWords } from "./utilities";
 
 export function displayNewWords(inputArea) {
-  const wordsList = getWords(20);
+  const wordsList = getWords(10);
   const dashboard = document.querySelector("#dashboard");
 
   inputArea.textContent = "";
